@@ -49,7 +49,7 @@ const SingUp: React.FC = () => {
           />
           <Button type="submit">Cadastrar</Button>
         </Form>
-        <a href="forgot">
+        <a href="logon">
           <FiArrowLeft size={22} />
           Voltar para logon
         </a>

@@ -3,7 +3,7 @@ import { shade } from 'polished';
 
 export const Button = styled.button`
   font-weight: bold;
-  color: ${({ theme }) => theme.colors['gray-2']};
+  color: ${({ theme }) => theme.colors['gray-0']};
   background: ${({ theme }) => theme.colors['yellow-mustard']};
   margin-top: 16px;
   border-radius: 10px;

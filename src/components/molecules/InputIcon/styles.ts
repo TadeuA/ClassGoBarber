@@ -56,8 +56,8 @@ export const Error = styled(Tooltip)`
     background: ${({ theme }) => theme.colors['red-warning']};
     color: ${({ theme }) => theme.colors.white};
     &::before {
-      border-color: ${({ theme }) => theme.colors['yellow-mustard']}
-        ${({ theme }) => theme.colors.transparent};
+      border-color: ${({ theme }) =>
+        `${theme.colors['red-warning']} ${theme.colors.transparent}`};
     }
   }
 `;

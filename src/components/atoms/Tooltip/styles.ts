@@ -22,8 +22,8 @@ export const Tooltip = styled.div`
     &::before {
       content: '';
       border-style: solid;
-      border-color: ${({ theme }) => theme.colors['yellow-mustard']}
-        ${({ theme }) => theme.colors.transparent};
+      border-color: ${({ theme }) =>
+        `${theme.colors['yellow-mustard']} ${theme.colors.transparent}`};
       border-width: 6px 6px 0 6px;
       left: 50%;
       transform: translateX(-50%);
