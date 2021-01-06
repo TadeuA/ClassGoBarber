@@ -3,14 +3,17 @@ import { ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
 import { Theme } from '../styles/themes/default';
 import GlobalStyles from '../styles/global';
+import { AuthProvider, useAuth } from './Auth';
 
 const AppProvider: React.FC = ({ children }: any) => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
-      <BrowserRouter>{children}</BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>{children}</BrowserRouter>
+      </AuthProvider>
     </ThemeProvider>
   );
 };
 
-export { AppProvider };
+export { AppProvider, useAuth };
