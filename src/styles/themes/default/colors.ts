@@ -7,5 +7,11 @@ export const colors = {
   'gray-4': '#666360',
   'yellow-mustard': '#FF9000',
   'red-warning': '#C53030',
+  'blue-light': '#EBF8FF',
+  blue: '#3172B7',
+  green: '#2E656A',
+  'green-light': '#E6FFFA',
+  'red-light': '#FDDEDE',
   transparent: 'transparent',
+  shadow: 'rgba(0, 0, 0, 0.2)',
 };

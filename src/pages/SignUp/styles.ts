@@ -1,6 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
 import background from '../../assets/sign-up-background.png';
+
+const appearFromRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX (50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX (0);
+  }
+`;
 
 export const Container = styled.div`
   height: 100vh;
@@ -16,7 +27,20 @@ export const Content = styled.div`
   align-items: center;
   width: 100%;
   max-width: 700px;
+`;
 
+export const Banner = styled.div`
+  flex: 1;
+  background: url(${background}) no-repeat center center;
+  background-size: cover;
+`;
+export const AnimationContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+
+  animation: ${appearFromRight} 1.5s;
   form {
     margin: 80px 0;
     width: 340px;
@@ -38,25 +62,19 @@ export const Content = styled.div`
     }
   }
   > a {
-    color: ${({ theme }) => theme.colors['gray-3']};
+    color: ${({ theme }) => theme.colors['yellow-mustard']};
     display: block;
-    margin-bottom: 24px;
+    margin: 0 24px;
     text-decoration: none;
     display: flex;
     align-items: center;
     transition: color 0.2s;
     &:hover {
-      color: ${({ theme }) => shade(0.2, theme.colors['gray-3'])};
+      color: ${({ theme }) => shade(0.2, theme.colors['yellow-mustard'])};
     }
 
     svg {
       margin-right: 16px;
     }
   }
-`;
-
-export const Banner = styled.div`
-  flex: 1;
-  background: url(${background}) no-repeat center center;
-  background-size: cover;
 `;
